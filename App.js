@@ -18,6 +18,12 @@ export default function App() {
     ]);
   };
 
+  const removeGoalHandler = goalId => {
+	  setCourseGoals(currentGoals => {
+		  return currentGoals.filter((goal)=> goalId !== goalId );
+	  });
+  }
+
   return (
     <View style={styles.screen}>
       <GoalInput onAddGoal={addGoalHandler} />
